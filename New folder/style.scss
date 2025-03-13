@@ -28,6 +28,10 @@
     position: sticky;
     top: 0;
 
+    .menu {
+        display: none;
+    }
+
     .logo {
         width: 25%;
         height: 100%;
@@ -184,20 +188,49 @@
             width: 360px;
             height: 311px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .text {
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .btn {
+                width: 200px;
+                height: 54px;
+                background-color: #745cf9;
+                border: none;
+                color: white;
+                font-weight: 600;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 13px;
+            }
+
+            .btn:hover {
+
+                background-color: #5a3dfc;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+
         }
 
-        
+
 
 
     }
 
 }
-
-
-
-
 
 
 
@@ -253,6 +286,19 @@
 
 
 
+    }
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    
+    .menu {
+        display: block;
+    }
+
+    .right {
+        display: none;
     }
 
 }
